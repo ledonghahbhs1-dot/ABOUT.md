@@ -1,55 +1,113 @@
-<div align="center">
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050b0a"/>
+      <stop offset="100%" stop-color="#0a1512"/>
+    </linearGradient>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:141E30,100:243B55&height=220&section=header&text=hgvh&fontSize=70&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Full-Stack%20Developer%20%7C%20Game%20Reverse%20Engineer&descAlignY=58&descSize=16&descColor=64FFDA" width="100%"/>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=800&color=64FFDA&center=true&vCenter=true&width=600&lines=Building+WolfMod+solo;Reverse-engineering+Dragon+City;GameGuardian%2C+Lua%2C+memory+patching" />
+    <clipPath id="frame">
+      <rect x="0" y="0" width="900" height="220" rx="14"/>
+    </clipPath>
+  </defs>
 
-</div>
+  <g clip-path="url(#frame)">
+    <rect width="900" height="220" fill="url(#bgGrad)"/>
 
-### 👋 About me
+    <!-- scanlines -->
+    <g opacity="0.12">
+      <rect x="0" y="0" width="900" height="220" fill="url(#bgGrad)"/>
+      <g stroke="#00ff9c" stroke-width="1">
+        <line x1="0" y1="0" x2="900" y2="0"/>
+        <line x1="0" y1="6" x2="900" y2="6"/>
+        <line x1="0" y1="12" x2="900" y2="12"/>
+        <line x1="0" y1="18" x2="900" y2="18"/>
+        <line x1="0" y1="24" x2="900" y2="24"/>
+        <line x1="0" y1="30" x2="900" y2="30"/>
+        <line x1="0" y1="36" x2="900" y2="36"/>
+        <line x1="0" y1="42" x2="900" y2="42"/>
+        <line x1="0" y1="48" x2="900" y2="48"/>
+        <line x1="0" y1="54" x2="900" y2="54"/>
+        <line x1="0" y1="60" x2="900" y2="60"/>
+        <line x1="0" y1="66" x2="900" y2="66"/>
+        <line x1="0" y1="72" x2="900" y2="72"/>
+        <line x1="0" y1="78" x2="900" y2="78"/>
+        <line x1="0" y1="84" x2="900" y2="84"/>
+        <line x1="0" y1="90" x2="900" y2="90"/>
+        <line x1="0" y1="96" x2="900" y2="96"/>
+        <line x1="0" y1="102" x2="900" y2="102"/>
+        <line x1="0" y1="108" x2="900" y2="108"/>
+        <line x1="0" y1="114" x2="900" y2="114"/>
+        <line x1="0" y1="120" x2="900" y2="120"/>
+        <line x1="0" y1="126" x2="900" y2="126"/>
+        <line x1="0" y1="132" x2="900" y2="132"/>
+        <line x1="0" y1="138" x2="900" y2="138"/>
+        <line x1="0" y1="144" x2="900" y2="144"/>
+        <line x1="0" y1="150" x2="900" y2="150"/>
+        <line x1="0" y1="156" x2="900" y2="156"/>
+        <line x1="0" y1="162" x2="900" y2="162"/>
+        <line x1="0" y1="168" x2="900" y2="168"/>
+        <line x1="0" y1="174" x2="900" y2="174"/>
+        <line x1="0" y1="180" x2="900" y2="180"/>
+        <line x1="0" y1="186" x2="900" y2="186"/>
+        <line x1="0" y1="192" x2="900" y2="192"/>
+        <line x1="0" y1="198" x2="900" y2="198"/>
+        <line x1="0" y1="204" x2="900" y2="204"/>
+        <line x1="0" y1="210" x2="900" y2="210"/>
+        <line x1="0" y1="216" x2="900" y2="216"/>
+      </g>
+    </g>
 
-- 🔭 Currently building **[WolfMod](https://wolfmod.xyz)** — a game modification script platform (key verification, VIP tiers, real payments)
-- 🎮 Reverse-engineering mobile games in my free time — memory analysis, GameGuardian Lua scripting, APK/Smali patching (mostly Dragon City)
-- 🎓 Studying at PTIT
-- 💬 Speak Vietnamese & English
-- ⚡ Currently untangling a Cloudflare + Vercel edge routing conflict
+    <!-- moving scan beam -->
+    <rect x="0" y="-40" width="900" height="40" fill="#00ff9c" opacity="0.08">
+      <animate attributeName="y" values="-40;220;-40" dur="4s" repeatCount="indefinite"/>
+    </rect>
 
-### 🛠️ Tech Stack
+    <!-- border -->
+    <rect x="3" y="3" width="894" height="214" rx="12" fill="none" stroke="#00ff9c" stroke-width="2" opacity="0.55"/>
 
-<div align="center">
+    <!-- prompt tag -->
+    <text x="40" y="50" font-family="Fira Code, Consolas, monospace" font-size="18" fill="#00ff9c" opacity="0.8">root@wolfmod:~$</text>
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
+    <!-- Glitch layers of main text -->
+    <g font-family="Fira Code, Consolas, monospace" font-weight="700" font-size="72" text-anchor="middle">
 
-</div>
+      <!-- red/cyan ghost offsets for chromatic aberration -->
+      <text x="452" y="140" fill="#ff003c" opacity="0.55" filter="url(#glow)">
+        WOLF MOD
+        <animate attributeName="x" values="452;446;456;450;452" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;0.15;0.6;0.2;0.55" dur="1.3s" repeatCount="indefinite"/>
+      </text>
 
-### 📊 GitHub Stats
+      <text x="448" y="140" fill="#00e5ff" opacity="0.55" filter="url(#glow)">
+        WOLF MOD
+        <animate attributeName="x" values="448;454;444;450;448" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0.6;0.15;0.55;0.5" dur="1.1s" repeatCount="indefinite"/>
+      </text>
 
-<div align="center">
+      <!-- main crisp text -->
+      <text x="450" y="140" fill="#00ff9c" filter="url(#glow)">
+        WOLF MOD
+        <animate attributeName="opacity" values="1;1;1;0.35;1;1;1;1;0.55;1" dur="2.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
 
-<img src="https://github-readme-stats.vercel.app/api?username=hgvh&show_icons=true&theme=tokyonight&hide_border=true" width="49%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hgvh&layout=compact&theme=tokyonight&hide_border=true" width="35%"/>
+    <!-- subtitle -->
+    <text x="450" y="180" font-family="Fira Code, Consolas, monospace" font-size="16" fill="#7dffce" text-anchor="middle" opacity="0.8">
+      &gt; key verification // vip tiers // memory patching_
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.6s" repeatCount="indefinite"/>
+    </text>
 
-</div>
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=hgvh&theme=tokyonight&hide_border=true" width="60%"/>
-
-</div>
-
-### 📫 Connect
-
-<div align="center">
-
-[![Website](https://img.shields.io/badge/wolfmod.xyz-000000?style=for-the-badge&logo=firefox&logoColor=white)](https://wolfmod.xyz)
-
-</div>
+    <!-- blinking cursor -->
+    <rect x="632" y="167" width="10" height="18" fill="#00ff9c">
+      <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
